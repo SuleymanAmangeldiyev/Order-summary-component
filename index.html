@@ -13,15 +13,78 @@
 
     <title>Order summary card</title>
 
-    <style></style>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      main {
+        border: 2px solid black;
+        width: 400px;
+      }
+      #card_main-top {
+        width: 100%;
+      }
+      main h1,
+      main p {
+        text-align: center;
+      }
+      .contaner {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        background-color: azure;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .contaner img {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+      }
+      .contaner div h2,
+      .contaner div p {
+        font-size: 15px;
+        line-height: 25px;
+        margin: 0;
+      }
+      .contaner div p {
+      }
+      .contaner div {
+        height: 50px;
+        margin: 0;
+        padding-top: -20px;
+      }
+      .contaner #a {
+        margin-left: 90px;
+      }
+      .contaner #a a {
+        line-height: 40px;
+      }
+      .last_main-btns{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        gap: 10px;
+      }
+      .last_main-btns .frist{
+        background-color: blueviolet;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <img src="./images/illustration-hero.svg" alt="" />
+      <img src="./images/illustration-hero.svg" alt="" id="card_main-top" />
       <h1>Order Summary</h1>
       <p>
-        You can now listen to millions of songs, audiobooks, and podcasts on any
-        device anywhere you like!
+        You can now listen to millions of songs,
+        <br />
+        audiobooks, and podcasts on any device
+        <br />
+        anywhere you like!
       </p>
       <div class="contaner">
         <img src="./images/icon-music.svg" alt="" />
@@ -29,9 +92,15 @@
           <h2>Annual Plan</h2>
           <p>$59.99/year</p>
         </div>
+
+        <div id="a">
+          <a href="">Change</a>
+        </div>
       </div>
-      <button>Change Proceed to Payment</button>
-      <button>Cancel Order</button>
+      <div class="last_main-btns">
+        <button class="frist">Change Proceed to Payment</button>
+        <button class="second">Cancel Order</button>
+      </div>
     </main>
   </body>
 </html>
